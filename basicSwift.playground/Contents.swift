@@ -1,4 +1,4 @@
 import Cocoa
 
-let name = "Bilawal Haesri"
+let name = "Bilawal"
 print(name)
