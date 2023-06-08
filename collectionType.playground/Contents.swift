@@ -55,4 +55,49 @@ for i in color{
 }
 
 //Sets
+//Create Empty Set
+var letter = Set<String>()
+print("Letter = \(letter.count)")
+letter.insert("A")
+print("Letter = \(letter)")
 
+//Create Set with array literal
+var alphabet: Set = ["A","B","C"]
+print(alphabet)
+
+//Accessing and Modifying Set
+
+var favoriteBands: Set = ["PUP","Blink-182","Stand Atlantic","Belmont"]
+if !favoriteBands.isEmpty {
+    print("I have \(favoriteBands.count) favorite bands, such as...")
+    for value in favoriteBands{
+        print("\(value), ", terminator: "")
+    }
+}
+else if favoriteBands.isEmpty{
+    print("I don't have any favorite bands")
+}
+
+//Fundamental Set Operations
+
+var oddNumber:Set<Int> = [1,3,5,7,11,13]
+var evenNumber:Set<Int> = [2,4,6,8,10,12]
+var primeNumber:Set<Int> = [2,3,5,7,11,13]
+print("\n")
+print(oddNumber.intersection(evenNumber))
+print(oddNumber.subtracting(evenNumber))
+print(oddNumber.symmetricDifference(evenNumber))
+print(oddNumber.union(evenNumber))
+
+//Subset
+let houseAnimals: Set = ["🐶", "🐱"]
+let farmAnimals: Set = ["🐶", "🐱"]
+let cityAnimals: Set = ["🐦", "🐭"]
+
+houseAnimals.isSubset(of: farmAnimals)
+// true
+farmAnimals.isSuperset(of: houseAnimals)
+// true
+houseAnimals.isDisjoint(with: cityAnimals)
+// true
+farmAnimals.isStrictSuperset(of: houseAnimals)
