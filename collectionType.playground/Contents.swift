@@ -101,3 +101,40 @@ farmAnimals.isSuperset(of: houseAnimals)
 houseAnimals.isDisjoint(with: cityAnimals)
 // true
 farmAnimals.isStrictSuperset(of: houseAnimals)
+
+//Dictionaries
+//Creating an empy dictionary
+var nameOfIntegers: [Int: String] = [:]
+nameOfIntegers[16] = "sixteen"
+print(nameOfIntegers)
+var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+print(airports)
+
+//Accessing and Modifying Dictionaries
+print("The airports dictionary contains \(airports.count) items.")
+//check if no value on a dictionary
+if airports.isEmpty {
+    print("There is no airport departure")
+}
+else{
+    print("There are \(airports.count) airports departure")
+}
+
+//add new item/value
+airports["SUB"] = "Surabaya"
+
+//remove dictionary
+airports["SUB"] = nil
+airports.removeValue(forKey: "DUB")
+print("There are \(airports.count) airports departure")
+
+//Iterating over dictionary
+for (airportCode, airportName) in airports {
+    print("\(airportCode): \(airportName)")
+}
+let airportCodes = [String](airports.keys)
+// airportCodes is ["LHR", "YYZ"]
+
+let airportNames = [String](airports.values)
+// airportNames is ["London Heathrow", "Toronto Pearson"]
+
