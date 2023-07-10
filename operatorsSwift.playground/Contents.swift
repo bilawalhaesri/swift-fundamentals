@@ -40,7 +40,7 @@ aa+=4
 
 //Ternary Comparasion Operator
 let contentHeight = 40
-let hasHeader = true
+let hasHeader = false
 let rowHeight = contentHeight + (hasHeader ? 50 : 20)
 
 //Nil-Coalescing Operator

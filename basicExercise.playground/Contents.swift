@@ -1,13 +1,24 @@
 import Cocoa
 
-let day = "Monday"
-let dailyTemp = 75
+/*
+ Imagine you are creating a weather app that computes daily and weekly temperatures. You will use constants and variables to define the temperature of the current day of the week and the average temperature for that week.
+ */
+
+let day:String
+day = "Monday"
+let dailyTemp:Int
+dailyTemp = 75
+
 print("Today is \(day)")
-print ("The temperature on \(day) is \(dailyTemp)°F")
-var temp = 70
-print("The temperature on \(day) morning is \(temp)°F")
-temp = 80
-print("The temperature on \(day) evening is \(temp)°F")
-let weeklyTemp = 75
-temp = weeklyTemp
-print("The average temperature on this week is \(temp)°F")
+print("The temperature on \(day) is \(dailyTemp)ºF")
+
+var temperature:Int
+temperature = 70
+
+print("The temperature on \(day) morning is \(temperature)ºF")
+temperature = 80
+print("The temperature on \(day) evening is \(temperature)ºF")
+let weeklyTemp:Int
+weeklyTemp = 75
+temperature = weeklyTemp
+print("The average temperature this week is \(temperature)ºF")
